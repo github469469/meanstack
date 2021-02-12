@@ -1,0 +1,29 @@
+header{
+    width: 70;
+    height: 50px;
+    color: crimson;
+    background-color: darkblue;
+}
+
+div{
+    background-color:#ff0000 ;
+    width: 50%;
+}
+
+#mi{
+
+    background-color: #0026ff;
+    border-top: 4px solid #ff0000;
+    border-bottom: 4px solid #ff0000;
+}
+
+#mid{
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+}
+.cls{
+    color: white;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+}
