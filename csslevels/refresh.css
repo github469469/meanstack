@@ -1,0 +1,19 @@
+h1{
+    color:#eb8334;
+    text-align: center;
+}
+
+#first{
+
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+    float: left;
+}
+#second{
+    float: left;
+    width: 500px;
+    height: 300px;
+    background-color:blue;
+    
+}

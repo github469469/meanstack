@@ -19,6 +19,21 @@
 // arr.sort((o1,o2)=>o1-02)
 // console.log(arr)
 
-var arr=[1,2,2,3,4,6,2,3,6,6,5]
-arr.sort((a,b)=>a<b?1:-1)
-console.log(arr);
+//sort the array no of element in right corner
+
+// var arr=[1,2,2,3,4,6,2,3,6,6,5]
+// arr.sort((a,b)=>a<b?1:-1)
+// console.log(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
