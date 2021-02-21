@@ -8,11 +8,18 @@ h1{
     margin: 0;
     padding: 0;
 }
-
+#one{
+    width: 100px;  
+    border-style: solid;
+    border-color: aqua;
+}
 
 
 #top{
-width: 40%;
+position: relative;
+left: 30%;
+/*bottom: 10%;*/
+    width: 40%;
  background-color: blue;
 border-style:solid;
 border-color: burlywood;
@@ -21,6 +28,12 @@ border-width: 1px;
 padding-left: 5%; */
 }
 
+
+
+h3{
+    font-family:'Merienda', cursive;
+
+}
 #bottom{
     width: 40%;
      background-color: blue;
@@ -29,9 +42,4 @@ padding-left: 5%; */
     border-width: 1px;
     margin-top: 30%;
     margin-left: 40%;
-}
-
-3{
-    font-family:'Merienda', cursive;
-
 }

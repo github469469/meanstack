@@ -1,0 +1,48 @@
+h3{
+    color: burlywood;
+    text-align: center;
+}
+#first{
+    
+    width: 200px;
+    height: 500px;
+    background-color: cornflowerblue;
+    float: left;
+    margin-left: 10%;
+}
+#second{
+
+    
+    width: 200px;
+    height: 500px;
+    background-color: cadetblue;
+    float: left;
+    margin-left: 1%;
+}
+#third{
+    
+    width: 200px;
+    height: 500px;
+    background-color: steelblue;
+    float: left;
+    margin-left: 1%;
+}
+#fourth{
+    
+    width: 200px;
+    height: 500px;
+    background-color: palegoldenrod;
+    float: left;
+    margin-left: 1%;
+}
+#fifth{
+    
+    width: 200px;
+    height: 500px;
+    background-color: crimson;
+    float: left;
+    margin-left: 1%;
+}
+h3{
+    font-family: 'Pacifico', cursive;
+}
