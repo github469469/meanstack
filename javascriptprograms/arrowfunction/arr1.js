@@ -19,6 +19,7 @@ console.log(teams);
 
 var teams=isl.reduce((t1,t2)=>t1.pts>t2.pts?t2:t1)//add qualified score34 and<32 disqualify
 
-isl.filter(t1=>t1.pts>=32?t1["status"]="qualified":t1["status"]="not qualified").forEach(o=>console.log(o))
+isl.filter(t1=>t1.pts>=32?t1["status"]="qualified":t1["status"]="not qualified").forEach(o=>console.log(o))//pts>32
+
 
 

@@ -1,0 +1,58 @@
+body{
+    background-image: url("download.jpg");
+    background-color: darkgrey;
+}
+h1{
+    color: crimson;
+}
+#nokia{
+    background-color: darkblue;
+    border-style:solid;
+    border-width: 1px;
+    border-color: yellow;
+    width: 30%;
+    text-align: center;
+}
+#c3h{
+
+    color: white;
+    text-align: center;
+
+}
+#realme{
+
+    background-color: darkblue;
+    border-style:solid;
+    border-width: 1px;
+    border-color: yellow;
+    width: 30%;
+}
+.first{
+    background-color: darkblue;
+    border-style:solid;
+    border-width: 1px;
+    border-color: yellow;
+    width: 30%;
+}
+
+
+#ip{
+
+    color: white;
+    text-align: center;
+}
+#tp{
+
+    color: white;
+    text-align: center;
+}
+#up{
+
+    color: white;
+    text-align: center;
+}
+
+
+
+
+

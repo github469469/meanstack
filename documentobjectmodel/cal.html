@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Calculator</title>
+</head>
+<script src="cal.js"></script>
+<body>
+<h3> Calculator</h3>
+<br />
+<style>
+#calc {
+width: 300px;
+height: 250px;
+}
+
+.btn {
+width: 96%;
+height: 40px;
+font-size: 20px;
+}
+</style>
+
+<table id="calc">
+<tr>
+<td colspan=5><input id="inp" class="btn" name="display"  type="text"></td>
+</tr>
+<tr>
+<td><input class="btn" type=button onclick="clearBox()" value="c"></td>
+<td><input class="btn" type=button  onclick="back()" value="<"></td>
+<td><input class="btn" type=button onclick="displayBox('/')"value='/'></td>
+<td><input class="btn" type=button onclick="displayBox('*')"value='x'></td>
+</tr>
+<tr>
+<td><input class="btn" type=button onclick="displayBox('7')"value='7'></td>
+<td><input class="btn" type=button onclick="displayBox('8')"value='8'></td>
+<td><input class="btn" type=button onclick="displayBox('9')"value='9'></td>
+<td><input class="btn" type=button onclick="displayBox('-')"value='-'></td>
+</tr>
+<tr>
+<td><input class="btn" type=button onclick="displayBox('4')"value='4'></td>
+<td><input class="btn" type=button onclick="displayBox('5')"value='5'></td>
+<td><input class="btn" type=button onclick="displayBox('6')"value='6'></td>
+<td><input class="btn" type=button onclick="displayBox('+')"value='+'></td>
+</tr>
+<tr>
+<td><input class="btn" type=button onclick="displayBox('1')"value='1'></td>
+<td><input class="btn" type=button onclick="displayBox('2')"value='2'></td>
+<td><input class="btn" type=button onclick="displayBox('3')"value='3'></td>
+</td>
+<td rowspan="2"><input class="btn" type=button value="=" onclick="res()" style="height: 82px!important;"></td>
+</tr>
+<tr>
+<td colspan=2><input class="btn" type=button onclick="displayBox('0')" value="0"></td>
+<td><input class="btn" type=button value="."></td>
+</tr>
+</table>
+</body>
+</html>
