@@ -12,5 +12,18 @@ span{
 }
 
 button{
+    background-color: #5e068a ;
+    padding: 16px 27px;
+    font-weight: 600;
+    margin-top: 21px;
+    border-radius: 50px;
+    color: white;
+    border: 2px solid #5e068a;
     
+}
+button:hover{
+
+    background-color: white;
+    color: #5e068a;
+
 }

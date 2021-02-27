@@ -24,15 +24,16 @@ left: 30%;
 border-style:solid;
 border-color: burlywood;
 border-width: 1px;
-/* margin-left: 40%;
-padding-left: 5%; */
+/* margin-left: 40%; */
+padding-left: 5%; 
 }
 
 
 
 h3{
     font-family:'Merienda', cursive;
-
+    text-decoration: overline;
+    text-decoration: underline;
 }
 #bottom{
     width: 40%;
@@ -42,4 +43,10 @@ h3{
     border-width: 1px;
     margin-top: 30%;
     margin-left: 40%;
+    font-size:50px;
+    font-weight: 650;
+}
+
+.class{
+    height: 20px;
 }
