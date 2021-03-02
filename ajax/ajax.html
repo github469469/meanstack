@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
 
-<h1>welcone to ajax</h1>
 
+    <h1>welcome to ajax</h1>
+     <button onclick="getPost()">fetch all</button>
 
 </body>
 <script>
 
 
 
-var request=new XMLHttpRequest()
-request.open("get","https://jsonplaceholder.typicode.com/posts")
-// request.send
-//have to pass two argument in 1 and 2
+    var request = new XMLHttpRequest()
+    request.open("get", "https://jsonplaceholder.typicode.com/posts")
+    function getPost(){
+    request.send()
+    }
+    //  console.log();
+    //have to pass two argument in 1 and 2
+   
+   //to alert complete
+//     data=request.responseText
+//    console.log(data);
+//    alert("task complete")
 
+   //to call jsonplaceholder in console 
+    request.onreadystatechange = () => {
+        if (request.readyState == 4) {
+            if ((request.status >= 200) & (request.status < 300)) {
+                // console.log(request.responseText);
+                 var result=JSON.parse(request.responseText)
+                 console.log(result[0]);
+                 console.log(result[0].title);
+                for(let ob of result)
+                {
+                    console.log(ob["body"]);
+                }
+           
+           
+                }
+            else {
+                alert("Error!")
+            }
+
+        }
+
+
+    }
 
 
 
