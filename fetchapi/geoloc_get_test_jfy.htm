@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetchapi</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <h1>Country data</h1>
+    <p>enter country name <input type="text" name="ccc" id="cnme"> <button onclick="displayData()">get data</button>
+    </p>
+    <div id="res"></div>
+
+
+
+</body>
+<script>
+
+
+    function popData(data) {
+        // var data = JSON.parse(request.responseText)
+
+        let c_name = data[0].name;
+        let flag = data[0].flag;
+        let populat = data[0].population;
+        let curr = data[0].currencies[0].name;
+        console.log(data);
+
+        var htmll = ""
+        htmll += `
+                <div class="card" style="width: 18rem;">
+  <img src="${flag}" class="card-img-top" alt="n0-imge">
+  <div class="card-body">
+    <p class="card-text"> <h3>country namr: ${c_name} </h3>
+    <h3>population: ${populat} </h3>
+    <h3>currency: ${curr} </h3>
+    </p>
+  </div>
+</div>`
+        document.querySelector("#res").innerHTML = htmll;
+    }
+    function displayData() {
+        var name = document.querySelector("#cnme").value;
+
+
+
+        fetch(`https://restcountries.eu/rest/v2/name/${name}`)
+            .then(response => response.json())
+            .then(data => popData(data))
+            .catch(err => console.log(err))
+
+
+
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <h1>country name</h1>
+    <div class="row">
+        <div class="col">
+            <label>Enter the Countryname:</label>
+            <input type="text" id="cname">
+            <button onclick="displayData()">show</button>
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <!-- <div class="col-2"></div> -->
+        <div class="col-12" id="result"></div>
+        <!-- <div class="col-2"></div> -->
+
+
+    </div>
+
+
+</body>
+<script>
+    function popData(d) {
+        let c_name = d[0].name;
+        let flag = d[0].flag;
+        let population = d[0].population;
+        let currency = d[0].currencies[0].name;
+
+
+        var html_data = "";
+        html_data += `<div class="card" style="width: 18rem;">
+            <img src="${flag}" class="card-img-top" alt="...">
+            <div class="card-body">
+
+            <h3>country name:${c_name}</h3>
+            <h3>population:${population}</h3>
+            <h3> currency:${currency}</h3>
+
+
+
+
+              <p class="card-text"></p>
+            </div>
+          </div>`
+
+
+        document.querySelector("#result").innerHTML = html_data;
+
+
+    }
+    function displayData() {
+
+        var name = document.querySelector("#cname").value;
+
+        fetch(`https://restcountries.eu/rest/v2/name/${name}`)
+            .then(resp => resp.json())
+            .then(data => popData(data))
+            .catch(err => console.log(err))
+
+    }
+</script>
+
+</html>
