@@ -76,7 +76,7 @@
         fetch(`https://restcountries.eu/rest/v2/name/${name}`)
             .then(resp => resp.json())
             .then(data => popData(data))
-            .catch(err => console.log(err))
+            .catch(err => console.log(err.message))
 
     }
 </script>

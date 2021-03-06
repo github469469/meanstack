@@ -1,0 +1,13 @@
+.portion{
+width: 700px;
+height: 800px;
+background-color: aquamarine;
+
+
+}
+@media (max-width:450px){
+    .portion{
+
+        background-color: brown;
+    }
+}    
